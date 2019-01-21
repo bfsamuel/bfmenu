@@ -110,7 +110,6 @@
 
 		.bfnav {
 			display: block;
-			background: red;
 		}
 
 		.hide {
@@ -120,8 +119,7 @@
 		ul#ui-menu-mobile {
 			padding: 30px 0px;
 			width: 100%;
-			background: #004990;
-			color: #fff;
+			background: #fff;
 			position: fixed;
 			z-index: 1;
 			/*height: 100%;*/
@@ -139,7 +137,7 @@
 		}
 
 		ul#ui-menu-mobile>li>a {
-			color: #fff;
+			color: #004990;
 			font-size: 26px;
 			text-decoration: none;
 			font-weight: normal;
@@ -147,7 +145,7 @@
 		}
 
 		ul#ui-menu-mobile>li>a:hover {
-			color: #fff;
+			color: #5091CD;
 		}
 
 		.ui-menu-mobile-expand {
@@ -209,61 +207,6 @@
 			overflow-y: hidden;
 
 		}
-
-
-
-		.overlay {
-			height: 100%;
-			width: 0;
-			position: fixed;
-			z-index: 1;
-			top: 0;
-			left: 0;
-			background-color: rgb(80, 145, 205);
-			overflow-x: hidden;
-			transition: 0.5s;
-		}
-
-		.overlay-content {
-			position: relative;
-			top: 25%;
-			width: 100%;
-			text-align: center;
-			margin-top: 30px;
-		}
-
-		.overlay a {
-			padding: 8px;
-			text-decoration: none;
-			font-size: 36px;
-			color: #fff;
-			display: block;
-			transition: 0.3s;
-		}
-
-		.overlay a:hover,
-		.overlay a:focus {
-			color: #f1f1f1;
-		}
-
-		.overlay .closebtn {
-			position: absolute;
-			top: 20px;
-			right: 45px;
-			font-size: 60px;
-		}
-
-		@media screen and (max-height: 450px) {
-			.overlay a {
-				font-size: 20px
-			}
-
-			.overlay .closebtn {
-				font-size: 40px;
-				top: 15px;
-				right: 35px;
-			}
-		}
 	</style>
 
 
@@ -273,25 +216,16 @@
 </head>
 
 <body id="bfBody">
-	<div id="myNav" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<div class="overlay-content">
-			<a href="#">About</a>
-			<a href="#">Services</a>
-			<a href="#">Clients</a>
-			<a href="#">Contact</a>
-		</div>
-	</div>
 	<header class="bfnav-header">
 		<img src="img/barnabasfund-uk.png" alt="Barnabas Fund" id="logo">
 		<nav>
 			<div class="bfnav-mobile-menu">
-				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
+				<a href="javascript:void(0)" id="ui-menu-open" class="bfnav-mobile-menu-open">Menu</a>
+				<a href="javascript:void(0)" id="ui-menu-close" class="bfnav-mobile-menu-close hide">Close menu</a>
 			</div>
 			<ul id="ui-menu-mobile" class="bfnav">
-				<li class="bfMenuFirst"><a href="/en/projects" class="dropdown-toggle disabled" data-toggle="dropdown">Projects </a><span
-					 id="uiMenuExpand" class="ui-menu-mobile-expand"></span>
+				<li class="bfMenuFirst"><a href="/en/projects" class="dropdown-toggle disabled" data-toggle="dropdown">Projects <span
+					 id="uiMenuExpand" class="ui-menu-mobile-expand"></span></a>
 					<ul class="dropdown-menu">
 						<li class="first leaf"><a href="/en/projects/latest-needs">Latest needs</a></li>
 						<li class="leaf"><a href="/en/projects/where-we-work">Where we work</a></li>
@@ -469,15 +403,6 @@
 		//console.log(k);
 		//});	
 		//}
-	</script>
-	<script>
-		function openNav() {
-			document.getElementById("myNav").style.width = "100%";
-		}
-
-		function closeNav() {
-			document.getElementById("myNav").style.width = "0%";
-		}
 	</script>
 </body>
 

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<html lang="en" class="no-js">
 
 <head>
 	<meta name="viewport" content="width=device-width">
 	<title>Hope and Aid for the Persecuted Church | Barnabas Fund</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	<link rel="stylesheet" type="text/css" href="component.css" />
+	<script src="modernizr.custom.js"></script>
+
 	<style>
 		body {
 			font-family: 'Roboto', sans-serif;
@@ -78,7 +82,8 @@
 			right: 0;
 			top: 0;
 			position: absolute;
-			padding: 10px 10px;
+			padding: 15px;
+			border: 1px solid #eee;
 		}
 
 		.bfnav-mobile-menu a.bfnav-mobile-menu-open::after {
@@ -208,58 +213,55 @@
 
 		}
 
-		.overlay {
+		.sidenav {
 			height: 100%;
 			width: 0;
 			position: fixed;
 			z-index: 1;
 			top: 0;
-			right: 0;
-			background-color: rgb(80, 145, 205);
+			left: 0;
+			background-color: #fff;
 			overflow-x: hidden;
 			transition: 0.5s;
+			padding-top: 60px;
 		}
 
-		.overlay-content {
-			position: relative;
-			top: 25%;
-			width: 100%;
-			text-align: center;
-			margin-top: 30px;
-		}
-
-		.overlay a {
-			padding: 8px;
+		.sidenav a {
+			padding: 8px 8px 8px 32px;
 			text-decoration: none;
-			font-size: 36px;
-			color: #fff;
+			font-size: 25px;
+			color: #004990;
 			display: block;
 			transition: 0.3s;
 		}
 
-		.overlay a:hover,
-		.overlay a:focus {
+		.sidenav a:hover {
 			color: #f1f1f1;
 		}
 
-		.overlay .closebtn {
+		.sidenav .closebtn {
 			position: absolute;
-			top: 20px;
-			right: 45px;
-			font-size: 60px;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
+
+		#main {
+			transition: margin-left .5s;
+			padding: 16px;
 		}
 
 		@media screen and (max-height: 450px) {
-			.overlay a {
-				font-size: 20px
+			.sidenav {
+				padding-top: 15px;
 			}
 
-			.overlay .closebtn {
-				font-size: 40px;
-				top: 15px;
-				right: 35px;
+			.sidenav a {
+				font-size: 18px;
 			}
 		}
+
 	</style>
 
 
@@ -268,24 +270,23 @@
 
 </head>
 
-<body id="">
-	<div id="myNav" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<div class="overlay-content">
-
-			<a href="#">Projects</a>
-			<a href="#">News</a>
-			<a href="#">Get Involved</a>
-			<a href="#">Resources</a>
-			<a href="#">About</a>
-
-		</div>
-	</div>
+<body class="cbp-spmenu-push">
+		
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+				<h3>Menu</h3>
+				<a href="#">Projects</a>
+				<a href="#">News</a>
+				<a href="#">Get Involved</a>
+				<a href="#">Resources</a>
+				<a href="#">About</a>
+				<a href="#"></a>
+			</nav>
+			
 	<header class="bfnav-header">
-		<img src="https://bfsamuel.github.io/bfdonation/img/barnabas-blue-logo_GB.png" alt="Barnabas Fund" id="logo">
+		<img src="img/barnabasfund-uk.png" alt="Barnabas Fund" id="logo">
 		<nav>
 			<div class="bfnav-mobile-menu">
-				<span style="font-size:30px;cursor:pointer;width:25px;" onclick="openNav()">&#9776;</span>
+				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
 			</div>
 
@@ -296,6 +297,12 @@
 	</header>
 	<main id="bfMain">
 		<!-- Main focus Start -->
+
+		<div class="main">
+						<section class="buttonset">
+					<button id="showRightPush">Show/Hide Right Push Menu</button>
+				</section>
+			</div>
 		<div class="focus-box">
 			<img src="img/focus-image.jpg" alt="Indonesia appeal">
 			<h1>Indonesia Earthquake and Tsunami</h1>
@@ -324,55 +331,21 @@
 
 		<!-- Main focus End -->
 	</main>
+	<script src="classie.js"></script>
+
 	<script>
-		var navMenu, bfBody, bfMenuFirst;
-		navMenu = document.getElementById("ui-menu-mobile");
-		bfBody = document.getElementById("bfBody");
-		bfMain = document.getElementById("bfMain");
-		bfMenuFirst = document.getElementsByClassName("bfMenuFirst");
+		var 
+		menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+			showRightPush = document.getElementById('showRightPush'),
+			body = document.body;
 
-		document.getElementById("ui-menu-open").addEventListener("click", openFunction);
-		document.getElementById("ui-menu-close").addEventListener("click", closeFunction);
+	
+		showRightPush.onclick = function () {
+			classie.toggle(this, 'active');
+			classie.toggle(body, 'cbp-spmenu-push-toleft');
+			classie.toggle(menuRight, 'cbp-spmenu-open');
+		};
 
-		document.getElementById("uiMenuExpand").addEventListener("click", expandFunction);
-
-
-		function openFunction() {
-			navMenu.style.right = "0px";
-			document.getElementById("ui-menu-open").style.display = "none";
-			document.getElementById("ui-menu-close").style.display = "block";
-			bfBody.className += " no-stroll";
-			bfMain.className += " hide";
-		}
-
-		function closeFunction() {
-			navMenu.style.right = "-3000px";
-			document.getElementById("ui-menu-close").style.display = "none";
-			document.getElementById("ui-menu-open").style.display = "block";
-			bfBody.classList.remove("no-stroll");
-			bfMain.classList.remove("hide");
-		}
-
-		function expandFunction() {
-			document.getElementById("uiMenuExpand").className = "ui-menu-mobile-expand ui-show-menu";
-		}
-
-		//Double click on menu items	
-		//for (var k=0; k<bfMenuFirst.length; k++) {
-		//bfMenuFirst[k].addEventListener("click", function(event){
-		//event.preventDefault();
-		//console.log(k);
-		//});	
-		//}
-	</script>
-	<script>
-		function openNav() {
-			document.getElementById("myNav").style.width = "100%";
-		}
-
-		function closeNav() {
-			document.getElementById("myNav").style.width = "0%";
-		}
 	</script>
 </body>
 
