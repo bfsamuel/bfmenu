@@ -1,317 +1,364 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+
 <head>
-<meta name="viewport" content="width=device-width">
-  <title>Hope and Aid for the Persecuted Church | Barnabas Fund</title>
+	<meta name="viewport" content="width=device-width">
+	<title>Hope and Aid for the Persecuted Church | Barnabas Fund</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-  <style>
-  
-   body {
-   font-family: 'Roboto', sans-serif;
-   margin: 0;
-   }
-   #logo {
-   width: 145px;
-   padding: 8px 10px;
-   }
-     
-   img {
-   max-width: 100%;
-   height: auto;
-   }
-   
-   nav > ul {
-   margin: 0;
-   padding: 0;
-   }
-   
-   ul > li > ul {
-   display: none;
-   }
-   
-   ul > li.bfmenu-first-click > ul {
-   display: block;
-   }   
-   
-   ul > li > ul > li > a {
-   font-size: 16px;
-	color: #004990;
-	text-decoration: none;
-	font-weight: normal;
-	text-transform: uppercase;   
-   }   
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		}
 
-   
-   ul > li {
-   float: left;
-   list-style-type: none;
-   padding: 10px 0px;
-   }
-   a.donate {
-   float: left;
-   clear: both;
-   }
-   
-	h1 {
-    position: absolute;
-    bottom: 0px;
-    background: #fff;
-    padding: 10px;
-    display: block;
-    color: #004990;
-    height: auto;
-	margin: 10px;
-	}
-   
-   .focus-box {
-   position: relative;
-   clear: both;
-   }
-   
+		#logo {
+			width: 145px;
+			padding: 8px 10px;
+		}
 
-   
-   nav .bfnav-mobile-menu {
-   font-size: 0;
-   right: 0;
-   top: 0;
-   position: absolute;
-   padding: 15px;
-   border: 1px solid #eee;
-   }
-   
-   .bfnav-mobile-menu a.bfnav-mobile-menu-open::after {
-    display: block;
-    width: 25px;
-    height: 25px;
-  
-    background: url(img/icon-burger.svg) no-repeat,linear-gradient(transparent,transparent);
-    content: '';
-    display: inline-block;
-    position: relative;
-    top: 5px;
-	left: 5px;
-	}
-   .bfnav-mobile-menu a.bfnav-mobile-menu-close::after {
-    display: block;
-    width: 25px;
-    height: 25px;
-  
-    background: url(img/x-icon.svg) no-repeat,linear-gradient(transparent,transparent);
-    content: '';
-    display: inline-block;
-    position: relative;
-    top: 5px;
-	left: 5px;
-	}	
+		img {
+			max-width: 100%;
+			height: auto;
+		}
 
-   .bfnav {
-   display: block;
-   }	
-	
-	.hide {
-		display: none;
-	}	
+		nav>ul {
+			margin: 0;
+			padding: 0;
+		}
 
-	ul#ui-menu-mobile {
-		padding: 30px 0px;
-		width: 100%;
-		background: #fff;
-		position: fixed;
-		z-index: 1;
-		/*height: 100%;*/
-		top: 57px;
-		transition: right 0.5s;
-		right: -3000px;
-		border-bottom: 5px solid #004990;
-	}	
-	
-	ul#ui-menu-mobile li {
-		width: 100%;
-		text-align: center;
-		
-		
-	}	
-	ul#ui-menu-mobile > li > a { 
-	color: #004990;
-	font-size: 26px;
-	text-decoration: none;
-	font-weight: normal;
-	text-transform: uppercase;
-	}
-	
-	ul#ui-menu-mobile > li > a:hover {
-	color: #5091CD;
-	}
-	
-	.ui-menu-mobile-expand {
-	display: block;
-    width: 25px;
-    height: 25px;
-    background: url(img/expand-icon.svg) no-repeat,linear-gradient(transparent,transparent);
-    content: '';
-    display: inline-block;
-    position: relative;
-    top: 5px;
-	left: 5px;
-	transition: transform 0.5s;
-	}
-	
-	.ui-menu-mobile-expand:hover {
-	cursor: pointer;
-	transform: rotate(45deg);
-	}
-	
-	.ui-menu-mobile-expand.ui-show-menu ~ ul {
-	display: block;
-	}
-	
-	
-	.bfnav-donate {
-	top: 0px;
-    font-size: 18px;
-    right: 56px;
-    height: 56px;
-    width: 120px;
-    position: absolute;
-    background: #d61215;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 55px;
-    font-weight: bold;
-    font-family: 'Roboto Condensed', sans-serif;
-	}
-	
-	.bfnav-donate:hover {
-	background: #b11416;
-	}
-	
-	
-	header.bfnav-header {
-	position: fixed;
-    top: 0px;
-    z-index: 1;
-    width: 100%;
-    background: #fff;
-	border-bottom: 1px solid #ccc;
-	height: 56px;
-	}
-	
-	body.no-stroll {
-	overflow-y: hidden;
-	
-	}
-	
-  </style>
-  
-  
+		ul>li>ul {
+			display: none;
+		}
 
-  
-  
+		ul>li.bfmenu-first-click>ul {
+			display: block;
+		}
+
+		ul>li>ul>li>a {
+			font-size: 16px;
+			color: #004990;
+			text-decoration: none;
+			font-weight: normal;
+			text-transform: uppercase;
+		}
+
+
+		ul>li {
+			float: left;
+			list-style-type: none;
+			padding: 10px 0px;
+		}
+
+		a.donate {
+			float: left;
+			clear: both;
+		}
+
+		h1 {
+			position: absolute;
+			bottom: 0px;
+			background: #fff;
+			padding: 10px;
+			display: block;
+			color: #004990;
+			height: auto;
+			margin: 10px;
+		}
+
+		.focus-box {
+			position: relative;
+			clear: both;
+		}
+
+
+
+		nav .bfnav-mobile-menu {
+			font-size: 0;
+			right: 0;
+			top: 0;
+			position: absolute;
+			padding: 15px;
+			border: 1px solid #eee;
+		}
+
+		.bfnav-mobile-menu a.bfnav-mobile-menu-open::after {
+			display: block;
+			width: 25px;
+			height: 25px;
+
+			background: url(img/icon-burger.svg) no-repeat, linear-gradient(transparent, transparent);
+			content: '';
+			display: inline-block;
+			position: relative;
+			top: 5px;
+			left: 5px;
+		}
+
+		.bfnav-mobile-menu a.bfnav-mobile-menu-close::after {
+			display: block;
+			width: 25px;
+			height: 25px;
+
+			background: url(img/x-icon.svg) no-repeat, linear-gradient(transparent, transparent);
+			content: '';
+			display: inline-block;
+			position: relative;
+			top: 5px;
+			left: 5px;
+		}
+
+		.bfnav {
+			display: block;
+			background: red;
+		}
+
+		.hide {
+			display: none;
+		}
+
+		ul#ui-menu-mobile {
+			padding: 30px 0px;
+			width: 100%;
+			background: #004990;
+			color:#fff;
+			position: fixed;
+			z-index: 1;
+			/*height: 100%;*/
+			top: 57px;
+			transition: right 0.5s;
+			right: -3000px;
+			border-bottom: 5px solid #004990;
+		}
+
+		ul#ui-menu-mobile li {
+			width: 100%;
+			text-align: center;
+
+
+		}
+
+		ul#ui-menu-mobile>li>a {
+			color: #fff;
+			font-size: 26px;
+			text-decoration: none;
+			font-weight: normal;
+			text-transform: uppercase;
+		}
+
+		ul#ui-menu-mobile>li>a:hover {
+			color: #fff;
+		}
+
+		.ui-menu-mobile-expand {
+			display: block;
+			width: 25px;
+			height: 25px;
+			background: url(img/expand-icon.svg) no-repeat, linear-gradient(transparent, transparent);
+			content: '';
+			display: inline-block;
+			position: relative;
+			top: 5px;
+			left: 5px;
+			transition: transform 0.5s;
+		}
+
+		.ui-menu-mobile-expand:hover {
+			cursor: pointer;
+			transform: rotate(45deg);
+		}
+
+		.ui-menu-mobile-expand.ui-show-menu~ul {
+			display: block;
+		}
+
+
+		.bfnav-donate {
+			top: 0px;
+			font-size: 18px;
+			right: 56px;
+			height: 56px;
+			width: 120px;
+			position: absolute;
+			background: #d61215;
+			color: #fff;
+			text-decoration: none;
+			text-align: center;
+			text-transform: uppercase;
+			line-height: 55px;
+			font-weight: bold;
+			font-family: 'Roboto Condensed', sans-serif;
+		}
+
+		.bfnav-donate:hover {
+			background: #b11416;
+		}
+
+
+		header.bfnav-header {
+			position: fixed;
+			top: 0px;
+			z-index: 1;
+			width: 100%;
+			background: #fff;
+			border-bottom: 1px solid #ccc;
+			height: 56px;
+		}
+
+		body.no-stroll {
+			overflow-y: hidden;
+
+		}
+	</style>
+
+
+
+
+
 </head>
+
 <body id="bfBody">
 	<header class="bfnav-header">
 		<img src="img/barnabasfund-uk.png" alt="Barnabas Fund" id="logo">
-			<nav>
-				<div class="bfnav-mobile-menu">
-					<a href="javascript:void(0)" id="ui-menu-open" class="bfnav-mobile-menu-open">Menu</a>
-					<a href="javascript:void(0)" id="ui-menu-close" class="bfnav-mobile-menu-close hide">Close menu</a>
-				</div>
-				<ul id="ui-menu-mobile" class="bfnav">
-					<li class="bfMenuFirst"><a href="/en/projects" class="dropdown-toggle disabled" data-toggle="dropdown">Projects </a><span id="uiMenuExpand" class="ui-menu-mobile-expand"></span>
-					<ul class="dropdown-menu"><li class="first leaf"><a href="/en/projects/latest-needs">Latest needs</a></li>
+		<nav>
+			<div class="bfnav-mobile-menu">
+				<a href="javascript:void(0)" id="ui-menu-open" class="bfnav-mobile-menu-open">Menu</a>
+				<a href="javascript:void(0)" id="ui-menu-close" class="bfnav-mobile-menu-close hide">Close menu</a>
+			</div>
+			<ul id="ui-menu-mobile" class="bfnav">
+				<li class="bfMenuFirst"><a href="/en/projects" class="dropdown-toggle disabled" data-toggle="dropdown">Projects </a><span
+					 id="uiMenuExpand" class="ui-menu-mobile-expand"></span>
+					<ul class="dropdown-menu">
+						<li class="first leaf"><a href="/en/projects/latest-needs">Latest needs</a></li>
 						<li class="leaf"><a href="/en/projects/where-we-work">Where we work</a></li>
-						<li class="expanded dropdown-submenu"><a href="/en/projects/how-we-help" class="dropdown-toggle disabled" data-toggle="dropdown">How we help <span class="glyphicon glyphicon-chevron-right"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/en/projects/category/basic-needs">Basic Needs</a></li>
-						<li class="leaf"><a href="/en/projects/category/christian-resources">Christian Resources</a></li>
-						<li class="leaf"><a href="/en/projects/category/christian-schools">Christian Schools</a></li>
-						<li class="leaf"><a href="/en/projects/category/christian-workers">Christian workers</a></li>
-						<li class="leaf"><a href="/en/projects/category/church-buildings">Church Buildings</a></li>
-						<li class="leaf"><a href="/en/projects/category/convert-care">Convert Care</a></li>
-						<li class="leaf"><a href="/en/projects/category/disaster-relief">Disaster Relief</a></li>
-						<li class="leaf"><a href="/en/projects/category/leadership-training">Leadership Training</a></li>
-						<li class="leaf"><a href="/en/projects/category/medical-care">Medical Care</a></li>
-						<li class="leaf"><a href="/en/projects/category/small-business">Small Business</a></li>
-						<li class="leaf"><a href="/en/projects/category/victims-of-violence">Victims of Violence</a></li>
-						<li class="last leaf"><a href="/en/projects/category/water">Water</a></li>
+						<li class="expanded dropdown-submenu"><a href="/en/projects/how-we-help" class="dropdown-toggle disabled"
+							 data-toggle="dropdown">How we help <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<ul class="dropdown-menu">
+								<li class="first leaf"><a href="/en/projects/category/basic-needs">Basic Needs</a></li>
+								<li class="leaf"><a href="/en/projects/category/christian-resources">Christian Resources</a></li>
+								<li class="leaf"><a href="/en/projects/category/christian-schools">Christian Schools</a></li>
+								<li class="leaf"><a href="/en/projects/category/christian-workers">Christian workers</a></li>
+								<li class="leaf"><a href="/en/projects/category/church-buildings">Church Buildings</a></li>
+								<li class="leaf"><a href="/en/projects/category/convert-care">Convert Care</a></li>
+								<li class="leaf"><a href="/en/projects/category/disaster-relief">Disaster Relief</a></li>
+								<li class="leaf"><a href="/en/projects/category/leadership-training">Leadership Training</a></li>
+								<li class="leaf"><a href="/en/projects/category/medical-care">Medical Care</a></li>
+								<li class="leaf"><a href="/en/projects/category/small-business">Small Business</a></li>
+								<li class="leaf"><a href="/en/projects/category/victims-of-violence">Victims of Violence</a></li>
+								<li class="last leaf"><a href="/en/projects/category/water">Water</a></li>
+							</ul>
+						</li>
+						<li class="last leaf"><a href="/en/projects/barnabas-gifts">Barnabas gifts</a></li>
 					</ul>
 				</li>
-				<li class="last leaf"><a href="/en/projects/barnabas-gifts">Barnabas gifts</a></li>
-				</ul></li>
-				<li class="bfMenuFirst"><a href="/en/news" class="dropdown-toggle disabled" data-toggle="dropdown">News <span class="glyphicon glyphicon-chevron-down"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/en/news" title="">Latest news</a></li>
-				<li class="leaf"><a href="/en/news/editorials-and-analysis">Editorials and Analysis</a></li>
-				<li class="expanded dropdown-submenu"><a href="/en/news/christian-action" class="dropdown-toggle disabled" data-toggle="dropdown">Christian Action <span class="glyphicon glyphicon-chevron-right"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/en/news/christian-action/for-the-church-in-the-west">For the Church in the West</a></li>
-				<li class="last leaf"><a href="/en/news/christian-action/for-the-persecuted-church" title="">For the Persecuted Church</a></li>
-				</ul></li>
-				<li class="leaf"><a href="/en/news/magazine-articles">Magazine Articles</a></li>
-				<li class="expanded dropdown-submenu"><a href="/en/news/receive-news-updates" class="dropdown-toggle disabled" data-toggle="dropdown">Receive news updates <span class="glyphicon glyphicon-chevron-right"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/en/news/receive-news-updates/barnabas-aid-magazine">Barnabas Aid magazine</a></li>
-				<li class="leaf"><a href="/en/barnabas-app">Barnabas app</a></li>
-				<li class="leaf"><a href="/en/barnabas-emails">Barnabas emails</a></li>
-				<li class="leaf"><a href="/en/social-media">Social media</a></li>
-				<li class="last leaf"><a href="/en/news/receive-news-updates/listen-to-podcasts">Listen to podcasts</a></li>
-				</ul></li>
-				<li class="last leaf"><a href="/en/news/archive" title="">Archive</a></li>
-				</ul></li>
-				<li  class="bfMenuFirst"><a href="/en/get-involved" class="dropdown-toggle disabled" data-toggle="dropdown">Get Involved <span class="glyphicon glyphicon-chevron-down"></span></a><ul class="dropdown-menu"><li class="first expanded dropdown-submenu"><a href="/en/get-involved/pray" class="dropdown-toggle disabled" data-toggle="dropdown">Pray <span class="glyphicon glyphicon-chevron-right"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/en/daily-prayer">Daily Prayer</a></li>
-				<li class="leaf"><a href="/en/get-involved/pray/prayer-focus-update">Prayer Focus Update</a></li>
-				<li class="leaf"><a href="/en/prayer-diary">Prayer Diary</a></li>
-				<li class="leaf"><a href="/en/get-involved/pray/prayer-resources">Prayer resources</a></li>
-				<li class="last leaf"><a href="/en/get-involved/pray/become-a-prayer-partner">Become a Prayer Partner</a></li>
-				</ul></li>
-				<li class="leaf"><a href="/en/get-involved/fundraise">Fundraise</a></li>
-				<li class="expanded dropdown-submenu"><a href="/en/get-involved/partner" class="dropdown-toggle disabled" data-toggle="dropdown">Partner <span class="glyphicon glyphicon-chevron-right"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/en/get-involved/partner/become-a-partner">Become a partner</a></li>
-				<li class="leaf"><a href="/en/get-involved/partner/partnership-resources">Partnership resources</a></li>
-				<li class="last leaf"><a href="/en/get-involved/partner/partnership-area">Partnership area</a></li>
-				</ul></li>
-				<li class="expanded dropdown-submenu"><a href="/en/get-involved/advocacy" class="dropdown-toggle disabled" data-toggle="dropdown">Advocacy <span class="glyphicon glyphicon-chevron-right"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/en/get-involved/advocacy/latest-petition">Latest petition</a></li>
-				<li class="last leaf"><a href="/en/get-involved/advocacy/write-to-your-representative">Write to your representative</a></li>
-				</ul></li>
-				<li class="leaf"><a href="/en/get-involved/events">Events</a></li>
-				<li class="leaf"><a href="/en/get-involved/sponsorship">Sponsorship</a></li>
-				<li class="leaf"><a href="/en/get-involved/book-a-speaker">Book a Speaker</a></li>
-				<li class="leaf"><a href="/en/get-involved/jobs" title="">Jobs</a></li>
-				<li class="leaf"><a href="/en/get-involved/leave-a-legacy">Leave a legacy</a></li>
-				<li class="leaf"><a href="/en/get-involved/initiatives">Initiatives</a></li>
-				<li class="last leaf"><a href="/en/get-involved/other-ways-to-give">Other ways to give</a></li>
-				</ul></li>
-				<li class="bfMenuFirst" ><a href="/en/shop">Resources</a></li>
-				<li  class="bfMenuFirst"><a href="/en/about" class="dropdown-toggle disabled" data-toggle="dropdown">About <span class="glyphicon glyphicon-chevron-down"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/en/about/who-we-are">Who we are</a></li>
-				<li class="leaf"><a href="/en/about/what-we-do">What we do</a></li>
-				<li class="leaf"><a href="/en/about/statement-of-faith">Statement of Faith</a></li>
-				<li class="leaf"><a href="/en/about/contact-us">Contact us</a></li>
-				<li class="leaf"><a href="/en/about/financial-review">Financial review</a></li>
-				<li class="last leaf"><a href="/en/about/privacy-policy">Privacy Policy</a></li>
-				</ul></li>
-			</ul>                                      
+				<li class="bfMenuFirst"><a href="/en/news" class="dropdown-toggle disabled" data-toggle="dropdown">News <span class="glyphicon glyphicon-chevron-down"></span></a>
+					<ul class="dropdown-menu">
+						<li class="first leaf"><a href="/en/news" title="">Latest news</a></li>
+						<li class="leaf"><a href="/en/news/editorials-and-analysis">Editorials and Analysis</a></li>
+						<li class="expanded dropdown-submenu"><a href="/en/news/christian-action" class="dropdown-toggle disabled"
+							 data-toggle="dropdown">Christian Action <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<ul class="dropdown-menu">
+								<li class="first leaf"><a href="/en/news/christian-action/for-the-church-in-the-west">For the Church in the
+										West</a></li>
+								<li class="last leaf"><a href="/en/news/christian-action/for-the-persecuted-church" title="">For the Persecuted
+										Church</a></li>
+							</ul>
+						</li>
+						<li class="leaf"><a href="/en/news/magazine-articles">Magazine Articles</a></li>
+						<li class="expanded dropdown-submenu"><a href="/en/news/receive-news-updates" class="dropdown-toggle disabled"
+							 data-toggle="dropdown">Receive news updates <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<ul class="dropdown-menu">
+								<li class="first leaf"><a href="/en/news/receive-news-updates/barnabas-aid-magazine">Barnabas Aid magazine</a></li>
+								<li class="leaf"><a href="/en/barnabas-app">Barnabas app</a></li>
+								<li class="leaf"><a href="/en/barnabas-emails">Barnabas emails</a></li>
+								<li class="leaf"><a href="/en/social-media">Social media</a></li>
+								<li class="last leaf"><a href="/en/news/receive-news-updates/listen-to-podcasts">Listen to podcasts</a></li>
+							</ul>
+						</li>
+						<li class="last leaf"><a href="/en/news/archive" title="">Archive</a></li>
+					</ul>
+				</li>
+				<li class="bfMenuFirst"><a href="/en/get-involved" class="dropdown-toggle disabled" data-toggle="dropdown">Get
+						Involved <span class="glyphicon glyphicon-chevron-down"></span></a>
+					<ul class="dropdown-menu">
+						<li class="first expanded dropdown-submenu"><a href="/en/get-involved/pray" class="dropdown-toggle disabled"
+							 data-toggle="dropdown">Pray <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<ul class="dropdown-menu">
+								<li class="first leaf"><a href="/en/daily-prayer">Daily Prayer</a></li>
+								<li class="leaf"><a href="/en/get-involved/pray/prayer-focus-update">Prayer Focus Update</a></li>
+								<li class="leaf"><a href="/en/prayer-diary">Prayer Diary</a></li>
+								<li class="leaf"><a href="/en/get-involved/pray/prayer-resources">Prayer resources</a></li>
+								<li class="last leaf"><a href="/en/get-involved/pray/become-a-prayer-partner">Become a Prayer Partner</a></li>
+							</ul>
+						</li>
+						<li class="leaf"><a href="/en/get-involved/fundraise">Fundraise</a></li>
+						<li class="expanded dropdown-submenu"><a href="/en/get-involved/partner" class="dropdown-toggle disabled"
+							 data-toggle="dropdown">Partner <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<ul class="dropdown-menu">
+								<li class="first leaf"><a href="/en/get-involved/partner/become-a-partner">Become a partner</a></li>
+								<li class="leaf"><a href="/en/get-involved/partner/partnership-resources">Partnership resources</a></li>
+								<li class="last leaf"><a href="/en/get-involved/partner/partnership-area">Partnership area</a></li>
+							</ul>
+						</li>
+						<li class="expanded dropdown-submenu"><a href="/en/get-involved/advocacy" class="dropdown-toggle disabled"
+							 data-toggle="dropdown">Advocacy <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<ul class="dropdown-menu">
+								<li class="first leaf"><a href="/en/get-involved/advocacy/latest-petition">Latest petition</a></li>
+								<li class="last leaf"><a href="/en/get-involved/advocacy/write-to-your-representative">Write to your
+										representative</a></li>
+							</ul>
+						</li>
+						<li class="leaf"><a href="/en/get-involved/events">Events</a></li>
+						<li class="leaf"><a href="/en/get-involved/sponsorship">Sponsorship</a></li>
+						<li class="leaf"><a href="/en/get-involved/book-a-speaker">Book a Speaker</a></li>
+						<li class="leaf"><a href="/en/get-involved/jobs" title="">Jobs</a></li>
+						<li class="leaf"><a href="/en/get-involved/leave-a-legacy">Leave a legacy</a></li>
+						<li class="leaf"><a href="/en/get-involved/initiatives">Initiatives</a></li>
+						<li class="last leaf"><a href="/en/get-involved/other-ways-to-give">Other ways to give</a></li>
+					</ul>
+				</li>
+				<li class="bfMenuFirst"><a href="/en/shop">Resources</a></li>
+				<li class="bfMenuFirst"><a href="/en/about" class="dropdown-toggle disabled" data-toggle="dropdown">About <span
+						 class="glyphicon glyphicon-chevron-down"></span></a>
+					<ul class="dropdown-menu">
+						<li class="first leaf"><a href="/en/about/who-we-are">Who we are</a></li>
+						<li class="leaf"><a href="/en/about/what-we-do">What we do</a></li>
+						<li class="leaf"><a href="/en/about/statement-of-faith">Statement of Faith</a></li>
+						<li class="leaf"><a href="/en/about/contact-us">Contact us</a></li>
+						<li class="leaf"><a href="/en/about/financial-review">Financial review</a></li>
+						<li class="last leaf"><a href="/en/about/privacy-policy">Privacy Policy</a></li>
+					</ul>
+				</li>
+			</ul>
 		</nav>
-		  
+
 		<a href="/donate" id="bfnavDonate" class="bfnav-donate">Donate</a>
-	  
+
 	</header>
-	<main id="bfMain">  
-		<!-- Main focus Start -->  
+	<main id="bfMain">
+		<!-- Main focus Start -->
 		<div class="focus-box">
 			<img src="img/focus-image.jpg" alt="Indonesia appeal">
 			<h1>Indonesia Earthquake and Tsunami</h1>
 		</div>
-		<!-- Main focus End -->  
+		<!-- Main focus End -->
 
-		<!-- BF overview Start -->  
+		<!-- BF overview Start -->
 		<h2>Barnabas Fund supports Christians suffering for their faith</h2>
 		<h3>Working in over 80 countries we provide hope and aid to the persecuted Church</h3>
-		<!-- BF overview End -->  
+		<!-- BF overview End -->
 
-		<!-- Sub focus Start -->  
+		<!-- Sub focus Start -->
 		<img src="img/pj-launch-food-collection-4x3.jpg" alt="Hungry, ignored and struggling to survive: help us to feed the most vulnerable Christian refugees fleeing war in South Sudan">
-		<h4>Hungry, ignored and struggling to survive: help us to feed the most vulnerable Christian refugees fleeing war in South Sudan</h4>
+		<h4>Hungry, ignored and struggling to survive: help us to feed the most vulnerable Christian refugees fleeing war in
+			South Sudan</h4>
 
 
-		<!-- Main focus End -->  
+		<!-- Main focus End -->
 
 
 
-		<!-- Sub focus Start -->  
+		<!-- Sub focus Start -->
 		<img src="img/displaced-kachin-4x3.jpg" alt="Hungry, ignored and struggling to survive: help us to feed the most vulnerable Christian refugees fleeing war in South Sudan">
 		<h4>Help Kachin Christians facing genocide in Myanmar (Burma)</h4>
 
@@ -319,45 +366,46 @@
 		<!-- Main focus End -->
 	</main>
 	<script>
-	var navMenu, bfBody, bfMenuFirst;
-	navMenu = document.getElementById("ui-menu-mobile");
-	bfBody = document.getElementById("bfBody");
-	bfMain =  document.getElementById("bfMain");
-	bfMenuFirst =  document.getElementsByClassName("bfMenuFirst");
-	
-	document.getElementById("ui-menu-open").addEventListener("click", openFunction);
-	document.getElementById("ui-menu-close").addEventListener("click", closeFunction);
-	
-	document.getElementById("uiMenuExpand").addEventListener("click", expandFunction);
-	
-	
-	function openFunction() {
-		navMenu.style.right = "0px";
-		document.getElementById("ui-menu-open").style.display = "none";
-		document.getElementById("ui-menu-close").style.display = "block";
-		bfBody.className += " no-stroll";
-		bfMain.className += " hide";
-	}
-	
-	function closeFunction() {
-		navMenu.style.right = "-3000px";
-		document.getElementById("ui-menu-close").style.display = "none";
-		document.getElementById("ui-menu-open").style.display = "block";
-		bfBody.classList.remove("no-stroll");
-		bfMain.classList.remove("hide");
-	}	
-	
-	function expandFunction() {
-		document.getElementById("uiMenuExpand").className = "ui-menu-mobile-expand ui-show-menu";
-	}		
-	
-	//Double click on menu items	
-	//for (var k=0; k<bfMenuFirst.length; k++) {
-	//bfMenuFirst[k].addEventListener("click", function(event){
-    //event.preventDefault();
-	//console.log(k);
-	//});	
-	//}
-	</script>  
+		var navMenu, bfBody, bfMenuFirst;
+		navMenu = document.getElementById("ui-menu-mobile");
+		bfBody = document.getElementById("bfBody");
+		bfMain = document.getElementById("bfMain");
+		bfMenuFirst = document.getElementsByClassName("bfMenuFirst");
+
+		document.getElementById("ui-menu-open").addEventListener("click", openFunction);
+		document.getElementById("ui-menu-close").addEventListener("click", closeFunction);
+
+		document.getElementById("uiMenuExpand").addEventListener("click", expandFunction);
+
+
+		function openFunction() {
+			navMenu.style.right = "0px";
+			document.getElementById("ui-menu-open").style.display = "none";
+			document.getElementById("ui-menu-close").style.display = "block";
+			bfBody.className += " no-stroll";
+			bfMain.className += " hide";
+		}
+
+		function closeFunction() {
+			navMenu.style.right = "-3000px";
+			document.getElementById("ui-menu-close").style.display = "none";
+			document.getElementById("ui-menu-open").style.display = "block";
+			bfBody.classList.remove("no-stroll");
+			bfMain.classList.remove("hide");
+		}
+
+		function expandFunction() {
+			document.getElementById("uiMenuExpand").className = "ui-menu-mobile-expand ui-show-menu";
+		}
+
+		//Double click on menu items	
+		//for (var k=0; k<bfMenuFirst.length; k++) {
+		//bfMenuFirst[k].addEventListener("click", function(event){
+		//event.preventDefault();
+		//console.log(k);
+		//});	
+		//}
+	</script>
 </body>
+
 </html>
